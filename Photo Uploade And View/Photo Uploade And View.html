@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Document</title>
+</head>
+<body>
+          <input type="file" id="demo" onchange="readFile();" /><br>
+   <!-- you should pick an image file for this demo to work -->
+   <img src="" alt="The image file will be shown here." id="result" height="200" width="140" />
+   
+   <script type="text/javascript">
+      function readFile() {
+         var reader = new FileReader();
+         var file = document.getElementById('demo').files[0];
+   
+         reader.onload = function(e) {
+            document.getElementById('result').src = e.target.result;
+         }
+   
+         reader.readAsDataURL(file);
+      }
+   </script>
+</body>
+</html>

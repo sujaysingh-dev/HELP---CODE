@@ -1,0 +1,46 @@
+
+<script>
+function allowOnlyLetters(e, t)   
+{    
+   if (window.event)    
+   {    
+	  var charCode = window.event.keyCode;    
+   }    
+   else if (e)   
+   {    
+	  var charCode = e.which;    
+   }    
+   else { return true; }    
+   if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))    
+	   return true;    
+   else  
+   {    
+	  alert("Please enter only alphabets");    
+	  return false;    
+   }           
+}      
+function allowOnlyNumbers(e, t)   
+{    
+   if (window.event)    
+   {    
+	  var charCode = window.event.keyCode;    
+   }    
+   else if (e)   
+   {    
+	  var charCode = e.which;    
+   }    
+   else { return true; }    
+   if ((charCode > 47 && charCode < 58))
+	   return true;    
+   else  
+   {    
+	  alert("Please enter only numbers...");  
+	  return false;    
+   }           
+}    
+	function p()
+	{
+		window.open("menu.html")
+	}
+</script>	
+

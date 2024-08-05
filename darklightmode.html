@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+     <head>
+          <meta charset="utf-8">
+          <meta http-equiv="X-UA-Compatible" content="IE=edge">
+          <title></title>
+          <meta name="description" content="">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <link rel="stylesheet" href="">
+     </head>
+     <body>
+          <button align-item="right">Dark</button>
+
+          
+          <script>
+               var button = document.querySelector("button");
+               var body = document.querySelector("body");
+               a=0;
+               button.addEventListener("click",function(){
+                    if(a==0){
+                         body.style.backgroundColor = "black";
+                         body.style.color = "white";
+                         button.innerHTML = "Light";
+                         a=1
+                    }
+                    else{
+                         body.style.backgroundColor = "white";
+                         body.style.color = "black";
+                         button.innerHTML = "Dark";
+                         a=0
+                    }
+               })
+          </script>
+     </body>
+</html>

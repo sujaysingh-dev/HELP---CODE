@@ -1,0 +1,82 @@
+onkeypress='return allowOnlyLetters(event)'
+
+onkeypress='return allowOnlyNumbers(event,t7)'
+
+onkeypress='return allowonlysingledot(event,t9)'
+
+
+<script>
+
+      function a()
+       {
+        f.t1.value=' '
+        f.t2.value=' '
+        f.t3.value=' '
+        f.t4.value=' '
+        f.t5.value=' '
+        f.t6.value=' '
+        f.t7.value=' '
+        f.t8.value=' '
+        f.t9.value=' '
+        f.t10.value=' '
+       }
+ 
+	function h()
+		{
+			window.open('mymenu.html','_self')
+		}
+
+
+	function allowOnlyLetters(e)   
+		{    
+			   
+			  var charCode = window.event.keyCode;    
+			   if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123))    
+					   return true;    
+			   else  
+			   {    
+					  alert('Please enter only alphabets');    
+					  return false;    
+			   }           
+		}    
+
+
+	function allowonlysingledot(e,t)
+		{		
+			 var charCode = window.event.keyCode;   
+				   //alert(charCode)
+			
+			   
+			if((charCode > 47 && charCode < 58))
+				   return true;    
+			   else  
+			   {    
+				if(charCode==46 && t.value.indexOf('.')==-1)
+					return true
+				else if (charCode==46 && t.value.indexOf('.')==0)
+					return false
+				else
+				{
+					  //alert('Please enter only numbers...');  
+					  return false;   
+				} 
+			   }         
+		   } 
+
+
+		function allowOnlyNumbers(e,t)   
+		{    
+				  
+			var charCode = window.event.keyCode;   
+							
+			if((charCode > 47 && charCode < 58))
+				   return true;    
+			   else  
+			   {    
+					alert('Please enter only numbers...');  
+					  return false;   
+				 
+			   }         
+		}    
+
+	 </script>

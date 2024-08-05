@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>calculator</title>
+</head>
+<body>
+        <form name="f">
+                <div class="box">
+                <div class="box1">
+                        <input type="text" name="display" placeholder="POWERD BY SUJAY SINGH" disabled>
+                </div>
+                <div class="button">
+                        <input type="button" value="AC" onclick = "display.value = ' ' ">
+                        <input type="button" value="/" onclick = "display.value += '/' ">
+                        <input type="button" value="%" onclick = "display.value += '%' ">
+                        <input type="button" value="<<" onclick = "display.value  =  display.value.toString().slice(0,-1) "><br>
+
+                        <input type="button" value="7" onclick = "display.value += '7' ">
+                        <input type="button" value="8" onclick = "display.value += '8' ">
+                        <input type="button" value="9" onclick = "display.value += '9' ">
+                        <input type="button" value="*" onclick = "display.value += '*' "><br>
+
+                        <input type="button" value="4" onclick = "display.value += '4' ">
+                        <input type="button" value="5" onclick = "display.value += '5' ">
+                        <input type="button" value="6" onclick = "display.value += '6' ">
+                        <input type="button" value="+" onclick = "display.value += '+' "><br>
+
+                        <input type="button" value="1" onclick = "display.value += '1' ">
+                        <input type="button" value="2" onclick = "display.value += '2' ">
+                        <input type="button" value="3" onclick = "display.value += '3' ">
+                        <input type="button" value="-" onclick = "display.value += '-' "><br>
+
+                        <input type="button" value="00" onclick = "display.value += '00' ">
+                        <input type="button" value="0" onclick = "display.value += '0' ">
+                        <input type="button" value="." onclick = "display.value += '.' ">
+                        <input type="button" value="=" onclick = "display.value = eval(display.value)" class="equal">
+                </div>
+        </div>
+        </form>
+</body>
+<script>
+
+</script>
+<style>
+        *{
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+}
+body{
+        background-image: linear-gradient(to right, #72706f86,#57555486,#3f3c3c86,#0e0d0d86);
+        text-align: center;
+}
+.box{
+        background-color: aqua;
+        box-shadow: 2px 4px 10px rgb(156, 16, 16);
+        text-align: center;
+        max-width: fit-content;
+        padding: 10px;
+        border-radius: 10px;
+}
+.box1 input[type=text]{
+        text-align: center;
+        font-size: 19px;
+        font-weight: bold;
+        padding: 10px;
+        font-family: Arial;   
+        border: 2px solid rgb(240, 114, 114); 
+        box-shadow: 1px 1px 0px rgb(252, 128, 128);
+        background-color: rgba(0, 0, 0, 0.137); 
+}
+.button{
+        margin-top: 10px;
+}
+input[type=button]{
+        margin-top: 5px;
+        width: 68px;
+        height: 50px;
+        font-weight: bold;
+        font-size: 25px;
+        transition: .3s;
+        border-radius: 5px;
+        box-shadow: 1px 1px 0px rgb(243, 116, 116);
+}
+input[type=button]:hover{
+        background-color: rgba(73, 71, 71, 0.61);
+        color: rgba(255, 255, 255, 0.63);
+        cursor: pointer;
+}
+</style>
+</html>
